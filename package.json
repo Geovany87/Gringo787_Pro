@@ -1,0 +1,11 @@
+{
+  "name": "gringo787_pro",
+  "version": "1.0.0",
+  "description": "Professional landscaping site for Gringo787",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo \"No build step needed\" && exit 0"
+  },
+  "author": "Geovany Cardoza",
+  "license": "MIT"
+}
