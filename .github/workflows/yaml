@@ -48,3 +48,16 @@ jobs:
           else
             echo "No changes to commit"
           fi
+      - name: Update robots.txt with sitemap URL
+        run: |
+          DOMAIN="https://gringo787.netlify.app" # replace later with your custom domain
+          ROBOTS_FILE="robots.txt"
+
+          if [ ! -f "$ROBOTS_FILE" ]; then
+            echo -e "User-agent: *\nAllow: /" > "$ROBOTS_FILE"
+          fi
+
+          grep -v -i '^Sitemap:' "$ROBOTS_FILE" > temp.txt || true
+          mv temp.txt "$ROBOTS_FILE"
+
+          echo "Sitemap: $DOMAIN/sitemap.xml" >> "$ROBOTS_FILE"
