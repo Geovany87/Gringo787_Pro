@@ -1,0 +1,50 @@
+name: Generate and Commit Sitemap
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: "17 7 * * 1" # Mondays at 07:17 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  build-sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Generate sitemap into the root directory (Netlify publish dir = '.')
+      - name: Generate sitemap.xml
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url: https://gringo787.netlify.app  # Change to your custom domain later
+          include-html: true
+          drop-html-extension: false
+          output-file: sitemap.xml
+          exclude: |
+            .github/**
+            node_modules/**
+            **/*.map
+            **/*.md
+            package*.json
+            netlify.toml
+            LICENSE
+
+      - name: Commit and push updated sitemap.xml
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add sitemap.xml
+            git commit -m "chore(seo): update sitemap.xml [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
