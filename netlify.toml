@@ -2,6 +2,11 @@
   publish = "public"
   command = "npm run build"
 
+[build.environment]
+  NODE_VERSION = "20"
+  # Optional: Set SITE_URL in Netlify UI for exact sitemap links
+  # SITE_URL = "https://www.gringo787.com"
+
 [[redirects]]
   from = "/*"
   to = "/404.html"
@@ -14,3 +19,14 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), camera=(), microphone=()"
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self';
+      style-src 'self';
+      img-src 'self' data:;
+      font-src 'self';
+      frame-ancestors 'none';
+      form-action 'self';
+      base-uri 'self';
+      upgrade-insecure-requests;
+    """

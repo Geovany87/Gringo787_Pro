@@ -1,40 +1,40 @@
-import { createWriteStream, existsSync, readFileSync, writeFileSync } from 'fs';
-import { SitemapStream } from 'sitemap';
-import globby from 'globby';
+// scripts/seo.js
+import globbyPkg from 'globby';
+const globby = globbyPkg.globby || globbyPkg;
+import { writeFileSync } from 'node:fs';
+import { SitemapStream, streamToPromise } from 'sitemap';
+import { resolve } from 'node:path';
+import { Readable } from 'node:stream';
 
-// SITE_URL should be set in Netlify; falls back to DOMAIN in HTML if not set.
-const SITE_URL = process.env.SITE_URL || 'https://www.gringo787.com';
-const GLOBS = [
-  'public/**/*.html',
-  '!public/404.html',
-  '!public/**/thanks/index.html' // exclude thank-you from sitemap
-];
+const isProd = process.env.NODE_ENV === 'production';
+const hostname = isProd
+  ? 'https://www.gringo787.com'
+  : 'http://localhost:5173';
 
 (async () => {
-  const files = await globby(GLOBS);
-  const links = files
-    .map((p) => p.replace(/^public/, ''))
-    .map((url) => {
-      const normalized = url.endsWith('/index.html') ? url.replace('/index.html', '/') : url;
-      const priority =
-        normalized === '/' ? 1.0 :
-        normalized.startsWith('/services') || normalized.startsWith('/es/servicios') ? 0.8 :
-        normalized.startsWith('/contact') || normalized.startsWith('/es/contacto') ? 0.9 :
-        0.7;
-      return { url: normalized, changefreq: 'weekly', priority };
-    });
+  try {
+    const pages = await globby([
+      'public/**/*.html',
+      '!public/404.html'
+    ]);
 
-  const stream = new SitemapStream({ hostname: SITE_URL });
-  const write = createWriteStream('public/sitemap.xml');
-  stream.pipe(write);
-  links.forEach((l) => stream.write(l));
-  stream.end();
+    const urls = pages.map(page =>
+      page.replace(/^public/, '')
+          .replace(/index\.html$/, '')
+          .replace(/\\/g, '/')
+    );
 
-  write.on('finish', () => {
-    const robotsPath = 'public/robots.txt';
-    const desired = `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`;
-    const current = existsSync(robotsPath) ? readFileSync(robotsPath, 'utf8') : '';
-    if (current.trim() !== desired.trim()) writeFileSync(robotsPath, desired, 'utf8');
-    console.log('Sitemap and robots updated.');
-  });
+    const sitemapStream = new SitemapStream({ hostname });
+
+    const xml = await streamToPromise(
+      Readable.from(urls.map(url => ({ url }))).pipe(sitemapStream)
+    );
+
+    const sitemapPath = resolve('public', 'sitemap.xml');
+    writeFileSync(sitemapPath, xml.toString());
+    console.log(`✅ Sitemap generated at ${sitemapPath} with base ${hostname}`);
+  } catch (err) {
+    console.error('❌ Error generating sitemap:', err);
+    process.exit(1);
+  }
 })();

@@ -1,133 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Gringo787 Landscaping - Professional landscaping services in Philadelphia, PA by Geovany Cardoza." />
-  <meta name="theme-color" content="#166534" />
 
-  <title>Gringo787 Landscaping | Philadelphia, PA</title>
+  <title>Gringo787 Landscaping | Premium Landscaping in Philadelphia</title>
+  <meta name="description" content="Lawn care, clean-ups, and seasonal maintenance in Philadelphia. Licensed, insured, and on-time." />
+  <link rel="canonical" href="https://www.gringo787.com/" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Gringo787 Landscaping | Philadelphia, PA" />
-  <meta property="og:description" content="Transforming yards with professional lawn care, garden design, and hardscaping. By Geovany Cardoza." />
+  <!-- Styles -->
+  <link rel="preload" href="/styles.css" as="style" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Icons & Manifest -->
+  <link rel="icon" href="/assets/icons/favicon.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://gringo787pro.netlify.app/" />
-  <meta property="og:image" content="https://gringo787pro.netlify.app/assets/images/hero.jpg" />
-
-  <!-- Twitter Card -->
+  <meta property="og:title" content="Gringo787 Landscaping" />
+  <meta property="og:description" content="Premium landscaping in Philadelphia—book same-week service today." />
+  <meta property="og:url" content="https://www.gringo787.com/" />
+  <meta property="og:image" content="https://www.gringo787.com/og-cover.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Gringo787 Landscaping | Philadelphia, PA" />
-  <meta name="twitter:description" content="Professional landscaping in Philadelphia by Geovany Cardoza." />
-  <meta name="twitter:image" content="https://gringo787pro.netlify.app/assets/images/hero.jpg" />
 
-  <!-- Icons -->
-  <link rel="icon" href="assets/favicon.ico" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="favicon.ico" />
-  <meta name="theme-color" content="#166534" />
-
-  <!-- Tailwind (CDN) -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.10/dist/tailwind.min.css" rel="stylesheet" />
-  <!-- AOS (Animate On Scroll) -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Preconnect hints -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-
-  <!-- JSON-LD: Local Business -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LandscapingBusiness",
     "name": "Gringo787 Landscaping",
-    "image": "https://gringo787pro.netlify.app/assets/images/hero.jpg",
-    "url": "https://gringo787pro.netlify.app/",
+    "image": "https://www.gringo787.com/og-cover.jpg",
+    "url": "https://www.gringo787.com/",
+    "telephone": "+1-215-555-0137",
+    "priceRange": "2822",
+    "areaServed": [{"@type": "City","name": "Philadelphia"}],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Philadelphia",
       "addressRegion": "PA",
+      "postalCode": "19100",
       "addressCountry": "US"
     },
-    "areaServed": "Philadelphia, PA",
-    "description": "Professional landscaping services including lawn care, garden design, and hardscaping.",
-    "founder": "Geovany Cardoza"
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "15:00"
+      }
+    ],
+    "sameAs": []
   }
   </script>
 </head>
+<body>
+<header class="border-b">
+  <div class="container-xl py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <img src="/assets/icons/favicon.svg" alt="Logo" class="w-8 h-8" />
+      <span class="font-display font-semibold">Gringo787</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6">
+      <a class="nav-link" href="/services/">Services</a>
+      <a class="nav-link" href="/gallery/">Gallery</a>
+      <a class="nav-link" href="/about/">About</a>
+      <a class="nav-link" href="/contact/">Contact</a>
+      <a class="nav-link" href="/es/">ES</a>
+      <a class="btn-primary" href="/contact/">Get a free quote</a>
+    </nav>
+  </div>
+</header>
 
-<body class="font-sans bg-gray-50 text-gray-800 antialiased">
-  <!-- Skip link -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-white text-gray-900 px-3 py-2 rounded shadow">Skip to content</a>
-
-  <!-- Header -->
-  <header class="bg-green-700 text-white shadow-md fixed w-full z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <a href="/" class="text-2xl font-bold flex items-center gap-2" aria-label="Gringo787 Landscaping Home">
-        <span>🌿</span> <span>Gringo787 Landscaping</span>
-      </a>
-      <nav aria-label="Primary">
-        <ul class="hidden md:flex items-center gap-6">
-          <li><a href="#home" class="hover:text-yellow-300">Home</a></li>
-          <li><a href="#about" class="hover:text-yellow-300">About</a></li>
-          <li><a href="#services" class="hover:text-yellow-300">Services</a></li>
-          <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
-        </ul>
-        <button id="hamburger" class="md:hidden text-2xl" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">☰</button>
-      </nav>
+<section class="section">
+  <div class="container-xl grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="font-display text-4xl md:text-5xl font-semibold">Premium landscaping in Philadelphia — same-week service</h1>
+      <p class="mt-4 text-lg muted">Lawn care, clean-ups, and seasonal maintenance done right. Licensed, insured, and on-time—every time. Se habla español.</p>
+      <div class="mt-6 flex gap-4">
+        <a href="/contact/" class="btn-primary">Get a free quote</a>
+        <a href="/services/" class="btn-secondary">Explore services</a>
+      </div>
+      <div class="mt-6 text-sm muted">Serving Philadelphia and surrounding suburbs.</div>
     </div>
-    <div id="mobile-menu" class="md:hidden hidden bg-green-800">
-      <ul class="flex flex-col gap-2 p-4">
-        <li><a href="#home" class="block py-2 hover:text-yellow-300">Home</a></li>
-        <li><a href="#about" class="block py-2 hover:text-yellow-300">About</a></li>
-        <li><a href="#services" class="block py-2 hover:text-yellow-300">Services</a></li>
-        <li><a href="#contact" class="block py-2 hover:text-yellow-300">Contact</a></li>
+    <div>
+      <img src="/assets/hero.webp" alt="Freshly maintained lawn and garden" class="w-full rounded-xl shadow-soft" loading="eager" />
+    </div>
+  </div>
+</section>
+
+<section class="section bg-[rgb(249,250,251)]">
+  <div class="container-xl">
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="card">
+        <h3 class="font-display text-xl mb-2">Lawn mowing</h3>
+        <p class="muted">Weekly/biweekly mowing, edging, and sweep.</p>
+        <a href="/services/#lawn" class="nav-link">Learn more →</a>
+      </div>
+      <div class="card">
+        <h3 class="font-display text-xl mb-2">Clean-ups</h3>
+        <p class="muted">Spring/fall clean-ups and debris haul-away.</p>
+        <a href="/services/#cleanup" class="nav-link">Learn more →</a>
+      </div>
+      <div class="card">
+        <h3 class="font-display text-xl mb-2">Mulch</h3>
+        <p class="muted">Bed prep, fabric, and premium mulch install.</p>
+        <a href="/services/#mulch" class="nav-link">Learn more →</a>
+      </div>
+      <div class="card">
+        <h3 class="font-display text-xl mb-2">Hedge trimming</h3>
+        <p class="muted">Clean lines and proper shaping.</p>
+        <a href="/services/#hedge" class="nav-link">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container-xl grid md:grid-cols-3 gap-6">
+    <figure class="card"><blockquote>“Fast, clean, and professional. Best in Philly.”</blockquote><figcaption class="mt-3 muted">— Alicia R., Fishtown</figcaption></figure>
+    <figure class="card"><blockquote>“They handled our spring clean-up and it looks amazing.”</blockquote><figcaption class="mt-3 muted">— Mike D., South Philly</figcaption></figure>
+    <figure class="card"><blockquote>“On time, fair price, great quality.”</blockquote><figcaption class="mt-3 muted">— Priya S., Manayunk</figcaption></figure>
+  </div>
+</section>
+
+<footer class="mt-20 border-t">
+  <div class="container-xl py-10 grid md:grid-cols-3 gap-8">
+    <div>
+      <h4 class="font-display font-semibold mb-2">Gringo787 Landscaping</h4>
+      <p class="muted">Licensed & insured • Se habla español</p>
+      <p class="mt-2"><a class="nav-link" href="tel:+1-215-555-0137">+1-215-555-0137</a> · <a class="nav-link" href="mailto:hello@gringo787.com">hello@gringo787.com</a></p>
+    </div>
+    <div>
+      <h5 class="font-semibold mb-2">Services</h5>
+      <ul class="space-y-1 muted">
+        <li><a href="/services/#lawn" class="nav-link">Lawn mowing</a></li>
+        <li><a href="/services/#cleanup" class="nav-link">Clean-ups</a></li>
+        <li><a href="/services/#mulch" class="nav-link">Mulch</a></li>
+        <li><a href="/services/#hedge" class="nav-link">Hedge trimming</a></li>
       </ul>
     </div>
-  </header>
-
-  <main id="main">
-    <!-- Hero -->
-    <section id="home" class="min-h-[92vh] flex items-center justify-center relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-green-900 via-green-700 to-emerald-600 opacity-90"></div>
-      <img src="assets/images/hero.jpg" alt="Healthy green lawn in Philadelphia" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay" loading="eager" />
-      <div class="relative z-10 text-center px-6" data-aos="fade-up">
-        <h1 class="text-4xl md:text-6xl font-extrabold text-yellow-300 drop-shadow mb-4">Transforming Yards, One Lawn at a Time</h1>
-        <p class="text-white/95 text-lg md:text-xl mb-6">Serving Philadelphia, PA — by Geovany Cardoza</p>
-        <a href="#contact" class="inline-block bg-yellow-300 text-gray-900 px-6 py-3 rounded font-semibold hover:bg-yellow-400 transition shadow">Get a Free Quote</a>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-20 bg-gray-100" data-aos="fade-right">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-green-800 mb-6">About Us</h2>
-        <p class="text-gray-700 leading-relaxed max-w-3xl">
-          Gringo787 Landscaping, led by founder <strong>Geovany Cardoza</strong>, delivers professional lawn care, garden design, and hardscaping across Philadelphia, PA. We blend craftsmanship with reliability to elevate curb appeal and outdoor living.
-        </p>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="py-20" data-aos="fade-left">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-green-800 mb-12">Our Services</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <article class="bg-white rounded shadow hover:shadow-lg transition p-6">
-            <img src="assets/images/service-lawn.jpg" alt="Lawn care service" class="rounded mb-4" loading="lazy" />
-            <h3 class="text-2xl font-bold mb-2">🌱 Lawn Care</h3>
-            <p class="text-gray-700">Weekly mowing, edging, fertilizing, and weed control for lush, healthy lawns.</p>
-          </article>
-          <article class="bg-white rounded shadow hover:shadow-lg transition p-6">
-            <img src="assets/images/service-garden.jpg" alt="Garden design service" class="rounded mb-4" loading="lazy" />
-            <h3 class="text-2xl font-bold mb-2">🌸 Garden Design</h3>
-            <p class="text-gray-700">Flower beds, shrub planting, and seasonal arrangements that bring life to your garden.</p>
-          </article>
-          <article class="bg-white rounded shadow hover:shadow-lg transition p-6">
-            <img src="assets/images/service-hard.jpg" alt="Hardscaping service" class="rounded mb-4" loading="lazy" />
-            <h3 class="text-2xl font-bold mb-2">🛠 Hardscaping</h3>
-            <p class="text-gray-700">Patios, pathways, and retaining walls designed for bea
+    <div>
+      <h5 class="font-semibold mb-2">Company</h5>
+      <ul class="space-y-1 muted">
+        <li><a href="/about/" class="nav

@@ -1,21 +1,39 @@
 {
   "name": "gringo787_pro",
-  "private": true,
   "version": "1.0.0",
-  "description": "Gringo787 Landscaping website",
+  "description": "Gringo787 Pro — upgraded, branded, zero-maintenance web app.",
+  "type": "module",
   "scripts": {
-    "dev": "tailwindcss -i src/styles.css -o public/styles.css --watch",
-    "build:css": "tailwindcss -i src/styles.css -o public/styles.css --minify",
-    "seo:update": "node scripts/seo.js",
-    "build": "npm run build:css && node scripts/seo.js"
+    "dev": "vite",
+   "build:seo": "cross-env NODE_ENV=production node scripts/seo.js",
+
+    "build:robots": "NODE_ENV=production node scripts/robots.js",
+    "dev:seo": "NODE_ENV=development node scripts/seo.js",
+    "dev:robots": "NODE_ENV=development node scripts/robots.js"
+
+,
+    "validate": "node scripts/validate-build.js",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
+  "author": "Geovany Cardoza",
+  "license": "MIT",
   "dependencies": {
-    "tailwindcss": "3.4.17",
-    "sitemap": "8.0.0",
-    "globby": "14.1.0",
-    "prettier": "3.6.2"
+    "globby": "11.1.0",
+    "sitemap": "8.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.0",
+    "jsdom": "26.1.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.10",
+    "vite": "7.1.2"
+  },
+  "browserslist": [
+    "defaults",
+    "last 2 versions",
+    "> 0.5%",
+    "not dead"
+  ]
 }
-
-
