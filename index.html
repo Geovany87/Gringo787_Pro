@@ -6,34 +6,34 @@
   <meta name="description" content="Gringo787 Landscaping - Professional landscaping services in Philadelphia, PA by Geovany Cardoza." />
   <meta name="theme-color" content="#166534" />
 
-
   <title>Gringo787 Landscaping | Philadelphia, PA</title>
 
   <!-- Open Graph -->
   <meta property="og:title" content="Gringo787 Landscaping | Philadelphia, PA" />
   <meta property="og:description" content="Transforming yards with professional lawn care, garden design, and hardscaping. By Geovany Cardoza." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://gringo787.netlify.app/" />
-  <meta property="og:image" content="/assets/images/hero.jpg" />
+  <meta property="og:url" content="https://gringo787pro.netlify.app/" />
+  <meta property="og:image" content="https://gringo787pro.netlify.app/assets/images/hero.jpg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Gringo787 Landscaping | Philadelphia, PA" />
   <meta name="twitter:description" content="Professional landscaping in Philadelphia by Geovany Cardoza." />
-  <meta name="twitter:image" content="/assets/images/hero.jpg" />
+  <meta name="twitter:image" content="https://gringo787pro.netlify.app/assets/images/hero.jpg" />
 
   <!-- Icons -->
-  <link rel="icon" href="/assets/favicon.ico" />
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="favicon.ico" />
+  <meta name="theme-color" content="#166534" />
+
   <!-- Tailwind (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.10/dist/tailwind.min.css" rel="stylesheet" />
   <!-- AOS (Animate On Scroll) -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-<link rel="apple-touch-icon" href="/favicon.ico" />
-<meta name="theme-color" content="#166534" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -45,8 +45,8 @@
     "@context": "https://schema.org",
     "@type": "LandscapingBusiness",
     "name": "Gringo787 Landscaping",
-    "image": "https://gringo787.netlify.app/assets/images/hero.jpg",
-    "url": "https://gringo787.netlify.app/",
+    "image": "https://gringo787pro.netlify.app/assets/images/hero.jpg",
+    "url": "https://gringo787pro.netlify.app/",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Philadelphia",
@@ -93,9 +93,8 @@
   <main id="main">
     <!-- Hero -->
     <section id="home" class="min-h-[92vh] flex items-center justify-center relative overflow-hidden">
-      <!-- Fallback gradient if no hero.jpg -->
       <div class="absolute inset-0 bg-gradient-to-br from-green-900 via-green-700 to-emerald-600 opacity-90"></div>
-      <img src="/assets/images/hero.jpg" alt="Healthy green lawn in Philadelphia" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay" loading="eager" />
+      <img src="assets/images/hero.jpg" alt="Healthy green lawn in Philadelphia" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay" loading="eager" />
       <div class="relative z-10 text-center px-6" data-aos="fade-up">
         <h1 class="text-4xl md:text-6xl font-extrabold text-yellow-300 drop-shadow mb-4">Transforming Yards, One Lawn at a Time</h1>
         <p class="text-white/95 text-lg md:text-xl mb-6">Serving Philadelphia, PA — by Geovany Cardoza</p>
@@ -119,69 +118,16 @@
         <h2 class="text-4xl font-bold text-green-800 mb-12">Our Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <article class="bg-white rounded shadow hover:shadow-lg transition p-6">
-            <img src="/assets/images/service-lawn.jpg" alt="Lawn care service" class="rounded mb-4" loading="lazy" />
+            <img src="assets/images/service-lawn.jpg" alt="Lawn care service" class="rounded mb-4" loading="lazy" />
             <h3 class="text-2xl font-bold mb-2">🌱 Lawn Care</h3>
             <p class="text-gray-700">Weekly mowing, edging, fertilizing, and weed control for lush, healthy lawns.</p>
           </article>
           <article class="bg-white rounded shadow hover:shadow-lg transition p-6">
-            <img src="/assets/images/service-garden.jpg" alt="Garden design service" class="rounded mb-4" loading="lazy" />
+            <img src="assets/images/service-garden.jpg" alt="Garden design service" class="rounded mb-4" loading="lazy" />
             <h3 class="text-2xl font-bold mb-2">🌸 Garden Design</h3>
             <p class="text-gray-700">Flower beds, shrub planting, and seasonal arrangements that bring life to your garden.</p>
           </article>
           <article class="bg-white rounded shadow hover:shadow-lg transition p-6">
-            <img src="/assets/images/service-hard.jpg" alt="Hardscaping service" class="rounded mb-4" loading="lazy" />
+            <img src="assets/images/service-hard.jpg" alt="Hardscaping service" class="rounded mb-4" loading="lazy" />
             <h3 class="text-2xl font-bold mb-2">🛠 Hardscaping</h3>
-            <p class="text-gray-700">Patios, pathways, and retaining walls designed for beauty and durability.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-20 bg-gray-100" data-aos="fade-up">
-      <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-green-800 mb-6">Contact Us</h2>
-
-        <!-- Netlify Form -->
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success" class="grid grid-cols-1 gap-4 bg-white p-6 rounded shadow">
-          <input type="hidden" name="form-name" value="contact" />
-          <p class="hidden">
-            <label>Don’t fill this out: <input name="bot-field" /></label>
-          </p>
-
-          <label class="block">
-            <span class="font-semibold">Name</span>
-            <input type="text" name="name" required class="mt-1 w-full p-3 rounded border" placeholder="Your Name" />
-          </label>
-
-          <label class="block">
-            <span class="font-semibold">Email</span>
-            <input type="email" name="email" required class="mt-1 w-full p-3 rounded border" placeholder="you@example.com" />
-          </label>
-
-          <label class="block">
-            <span class="font-semibold">Message</span>
-            <textarea name="message" required class="mt-1 w-full p-3 rounded border" rows="5" placeholder="How can we help?"></textarea>
-          </label>
-
-          <button type="submit" class="bg-yellow-300 text-gray-900 font-bold px-6 py-3 rounded hover:bg-yellow-400 transition">Send Message</button>
-        </form>
-
-        <p class="text-sm text-gray-600 mt-3">By submitting, you agree to be contacted regarding your request.</p>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-green-700 text-white text-center py-8">
-    <div class="max-w-6xl mx-auto px-6">
-      <p>&copy; 2025 Gringo787 Landscaping · Philadelphia, PA</p>
-      <p>Created by <strong>Geovany Cardoza</strong> · Founder of StratagenAI · Full‑Stack Developer</p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="/script.js"></script>
-</body>
-</html>
+            <p class="text-gray-700">Patios, pathways, and retaining walls designed for bea
