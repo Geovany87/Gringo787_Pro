@@ -1,0 +1,3 @@
+/* Minor polish on focus styles and images */
+:focus-visible { outline: 3px solid #facc15; outline-offset: 2px; }
+img { color: transparent; background: #f3f4f6; }

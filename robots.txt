@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gringo787.netlify.app/sitemap.xml
