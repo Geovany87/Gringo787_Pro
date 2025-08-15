@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gringo787 Landscaping | Premium Landscaping in Philadelphia</title>
+  <meta name="description" content="Lawn care, clean-ups, and seasonal maintenance in Philadelphia. Licensed, insured, and on-time." />
+  <link rel="canonical" href="https://www.gringo787.com/" />
+  <link rel="icon" href="/assets/icons/favicon.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preload" href="/styles.css" as="style" />
+  <link href="/styles.css" rel="stylesheet" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gringo787 Landscaping" />
+  <meta property="og:description" content="Premium landscaping in Philadelphia—book same-week service today." />
+  <meta property="og:url" content="https://www.gringo787.com/" />
+  <meta property="og:image" content="https://www.gringo787.com/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LandscapingBusiness",
+    "name": "Gringo787 Landscaping",
+    "image": "https://www.gringo787.com/og-cover.jpg",
+    "url": "https://www.gringo787.com/",
+    "telephone": "+1-215-555-0137",
+    "priceRange": "2822",
+    "areaServed": [{"@type": "City","name": "Philadelphia"}],
+    "address": {"@type": "PostalAddress","addressLocality": "Philadelphia","addressRegion": "PA","postalCode": "19100","addressCountry": "US"},
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
+      {"@type": "OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"15:00"}
+    ],
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+<header class="border-b">
+  <div class="container-xl py-4 flex items-center justify-between">
+    <a href="/es/" class="flex items-center gap-2">
+      <img src="/assets/icons/favicon.svg" alt="Logo" class="w-8 h-8" />
+      <span class="font-display font-semibold">Gringo787</span>
+    </a>
+  </div>
+</header>
+
+<main class="section container-xl">
+  <h1 class="font-display text-3xl font-semibold mb-6">Solicitar cotización</h1>
+  <form name="cotizacion" method="POST" action="/thanks/" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="campo-bot" class="grid md:grid-cols-2 gap-6">
+    <input type="hidden" name="form-name" value="cotizacion" />
+    <p class="hidden">
+      <label>No completar si eres humano: <input name="campo-bot" /></label>
+    </p>
+
+    <div class="md:col-span-1">
+      <label class="block text-sm font-medium mb-1">Nombre completo</label>
+      <input class="w-full border rounded-md p-3" type="text" name="nombre" placeholder="Nombre completo" required />
+    </div>
+    <div class="md:col-span-1">
+      <label class="block text-sm font-medium mb-1">Teléfono</label>
+      <input class="w-full border rounded-md p-3" type="tel" name="telefono" placeholder="Teléfono" required />
+    </div>
+    <div class="md:col-span-2">
+      <label class="block text-sm font-medium mb-1">Dirección de servicio</label>
+      <input class="w-full border rounded-md p-3" type="text" name="direccion" placeholder="Dirección" required />
+    </div>
+    <div class="md:col-span-1">
+      <label class="block text-sm font-medium mb-1">Servicio</label>
+      <select class="w-full border rounded-md p-3" name="servicio" required>
+        <option value="">Seleccionar</option>
+        <option>Corte de césped</option>
+        <option>Limpieza</option>
+        <option>Mulch</option>
+        <option>Poda</option>
+      </select>
+    </div>
+    <div class="md:col-span-1">
+      <label class="block text-sm font-medium mb-1">Correo (opcional)</label>
+      <input class="w-full border rounded-md p-3" type="email" name="correo" placeholder="tu@email.com" />
+    </div>
+    <div class="md:col-span-2">
+      <label class="block text-sm font-medium mb-1">Detalles</label>
+      <textarea class="w-full border rounded-md p-3" name="detalles" rows="5" placeholder="Cuéntanos"></textarea>
+    </div>
+    <div class="md:col-span-2">
+      <div data-netlify-recaptcha="true"></div>
+    </div>
+    <div class="md:col-span-2">
+      <button class="btn-primary" type="submit">Enviar</button>
+    </div>
+  </form>
+
+  <div class="mt-10 muted">
+    También por teléfono <a class="nav-link" href="tel:+1-215-555-0137">+1-215-555-0137</a> · Email <a class="nav-link" href="mailto:hello@gringo787.com">hello@gringo787.com</a>
+  </div>
+</main>
+
+<footer class="mt-20 border-t"><div class="container-xl py-10 text-sm muted">© Gringo787 Landscaping</div></footer>
+</body>
+</html>

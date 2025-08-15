@@ -1,0 +1,11 @@
+{
+  "name": "Gringo787 Landscaping",
+  "short_name": "Gringo787",
+  "icons": [
+    { "src": "/assets/icons/favicon.svg", "sizes": "64x64", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#18a651",
+  "background_color": "#ffffff"
+}

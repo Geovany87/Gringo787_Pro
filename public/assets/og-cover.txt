@@ -1,0 +1,1 @@
+Replace this file with an image at public/og-cover.jpg (1200x630 recommended).

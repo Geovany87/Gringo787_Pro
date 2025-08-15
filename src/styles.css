@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply font-body text-neutral-800 bg-white; }
+}
+
+/* Components */
+@layer components {
+  .btn-primary { @apply inline-flex items-center rounded-md bg-brand-500 px-5 py-3 text-white hover:bg-brand-600 transition shadow-soft; }
+  .btn-secondary { @apply inline-flex items-center rounded-md bg-white text-brand-700 border border-brand-200 px-5 py-3 hover:bg-brand-50; }
+  .card { @apply rounded-xl border border-neutral-200 p-6 hover:shadow-soft transition bg-white; }
+  .container-xl { @apply max-w-6xl mx-auto px-4; }
+  .section { @apply py-14 md:py-20; }
+  .muted { @apply text-neutral-600; }
+  .nav-link { @apply text-sm md:text-base text-neutral-700 hover:text-brand-700; }
+}

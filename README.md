@@ -1,12 +1,23 @@
-# Gringo787 Landscaping
+# Gringo787 Landscaping — Production Website
 
-Professional landscaping services website in Philadelphia, PA. Designed and developed by **Geovany Cardoza** — Founder of StratagenAI, Full‑Stack Developer.
+Professional, bilingual, conversion-first static site with automated SEO and zero-maintenance deployment on Netlify.
 
-## Features
-- **Modern UI/UX:** TailwindCSS (CDN) + AOS animations
-- **Responsive:** Mobile-first, accessible, keyboard-friendly
-- **Working Forms:** Netlify Forms (no server needed)
-- **SEO-Ready:** Meta tags, Open Graph, JSON-LD, sitemap, robots.txt
-- **Credits:** Footer + README attribution
+## Tech stack
+- HTML + Tailwind CSS (CLI build)
+- Netlify Forms with honeypot + reCAPTCHA
+- GitHub Actions for sitemap.xml + robots.txt
+- Zero server dependencies; static deploy
 
-## Structure
+## Quick start
+1. npm ci
+2. npm run dev (for local CSS watch) or npm run build
+3. Open public/index.html
+
+## Deploy
+- Netlify: publish "public", command "npm run build"
+- Set env var SITE_URL=https://www.gringo787.com in Netlify for correct sitemap links.
+
+## Customize
+- Update business details in HTML head JSON-LD (index, about, contact).
+- Replace images in public/assets.
+- Edit colors/typography in tailwind.config.js.
